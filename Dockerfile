@@ -19,6 +19,7 @@ RUN apt-get update \
  && apt-get install -yy --no-install-recommends \
      ca-certificates \
      curl \
+     less \
      devscripts \
      equivs \
      gcc \
