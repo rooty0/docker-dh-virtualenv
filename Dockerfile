@@ -22,6 +22,7 @@ RUN apt-get update \
      gcc \
      git \
      libfile-fcntllock-perl \
+     python-dev \
      python-virtualenv \
      virtualenv \
      reprepro \
