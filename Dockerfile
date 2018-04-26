@@ -23,6 +23,7 @@ RUN apt-get update \
      git \
      libfile-fcntllock-perl \
      python-virtualenv \
+     virtualenv \
      reprepro \
  && git clone https://github.com/spotify/dh-virtualenv.git -b 1.0 \
  && cd dh-virtualenv \
@@ -30,4 +31,4 @@ RUN apt-get update \
  && dpkg-buildpackage -us -uc -b \
  && dpkg -i ../dh-virtualenv_*.deb \
  && apt-get clean \
- && rm -rf /var/lib/apt/lists/*
+ && rm -rf /var/lib/apt/lists/* /dh-virtualen*
