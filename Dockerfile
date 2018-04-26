@@ -1,12 +1,9 @@
 FROM ubuntu:16.04
 
 ENV DEBIAN_FRONTEND="noninteractive" \
-    DEB_BUILD_OPTIONS="nocheck nodocs" \
-    BUILDDIR="/build"
+    DEB_BUILD_OPTIONS="nocheck nodocs"
 
-VOLUME "${BUILDDIR}/src"
-VOLUME "${BUILDDIR}/upstream"
-VOLUME "${BUILDDIR}/out"
+VOLUME "/build/src"
 
 # Disable documentation installation
 RUN echo 'path-exclude=/usr/share/doc/*'     > /etc/dpkg/dpkg.cfg.d/01-no_docs \
